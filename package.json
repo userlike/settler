@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "workspaces": [
+    "settler"
+  ],
+  "scripts": {
+    "commit": "git-cz",
+    "build": "yarn workspaces run build",
+    "test": "yarn workspaces run test",
+    "lint": "yarn workspaces run lint",
+    "lerna:version": "lerna version --conventional-commits",
+    "lerna:version:pre": "yarn lerna:version --conventional-prerelease",
+    "lerna:version:grad": "yarn lerna:version --conventional-graduate",
+    "lerna:publish": "yarn build && lerna publish from-package"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "@babel/preset-typescript": "7.9.0",
+    "babel-plugin-macros": "2.8.0",
+    "commitizen": "4.1.2",
+    "cz-lerna-changelog": "2.0.2",
+    "@typescript-eslint/eslint-plugin": "2.31.0",
+    "@typescript-eslint/parser": "2.31.0",
+    "eslint": "7.0.0",
+    "husky": "4.2.5",
+    "jest": "26.0.1",
+    "lerna": "3.20.2",
+    "prettier": "2.0.5",
+    "typescript": "3.8.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  }
+}
