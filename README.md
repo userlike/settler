@@ -62,7 +62,9 @@ const migrations = mkVersionedCodec([
 expect(
   migrations.decode({
     version: "1",
-    isOpened: true,
+    data: {
+      isOpened: true,
+    }
   })
 ).toEqual(right({ ids: [] }));
 
@@ -70,8 +72,10 @@ expect(
 expect(
   migrations.decode({
     version: "2",
-    isOpened: true,
-    ids: [1, 2, 3],
+    data: {
+      isOpened: true,
+      ids: [1, 2, 3],
+    },
   })
 ).toEqual(right({ ids: [1, 2, 3] }));
 
@@ -79,7 +83,9 @@ expect(
 expect(
   migrations.decode({
     version: "3",
-    ids: [1, 2, 3],
+    data: {
+      ids: [1, 2, 3],
+    },
   })
 ).toEqual(right({ ids: [1, 2, 3] }));
 
