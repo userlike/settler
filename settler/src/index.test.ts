@@ -39,6 +39,7 @@ describe("types", () => {
     expectType<Result>((to) => to.equal<Expected>());
   });
   test("Empty migrations", () => {
+    // eslint-disable-next-line @typescript-eslint/ban-types
     type Result = Migrations<[{ version: "1"; codec: io.Type<{}> }]>;
     expectType<Result>((to) => to.equal<[]>());
   });
@@ -130,7 +131,7 @@ describe("errors", () => {
     ]);
     const input = { version: "1", data: { ids: [1, 2, 3] } };
     expect(reporter(codec.decode(input))).toEqual([
-      "Expecting boolean at 0.data.isOpened but instead got: undefined.",
+      "Expecting boolean at 0.data.isOpened but instead got: undefined",
     ]);
   });
 
@@ -141,7 +142,7 @@ describe("errors", () => {
     ]);
     const input = { version: "1", data: { isOpened: true } };
     expect(reporter(codec.decode(input))).toEqual([
-      "Expecting Array<number> at migrate(1, 2).ids but instead got: null.",
+      "Expecting Array<number> at migrate(1, 2).ids but instead got: null",
     ]);
   });
 
@@ -152,9 +153,10 @@ describe("errors", () => {
     ]);
     const input = { version: "1", data: { isOpened: true } };
     expect(reporter(codec.decode(input))).toEqual([
-      'Expecting Array<number> at migrate(2, 3).ids but instead got: "not found".',
+      'Expecting Array<number> at migrate(2, 3).ids but instead got: "not found"',
     ]);
   });
+
   it("reports input error when there is one version only", () => {
     const codec = mkVersionedCodec([
       { version: "1", codec: io.type({ foo: io.string }) },
@@ -162,7 +164,7 @@ describe("errors", () => {
 
     const input = { version: "1", data: { foo: 99 } };
     expect(reporter(codec.decode(input))).toEqual([
-      "Expecting string at data.foo but instead got: 99.",
+      "Expecting string at data.foo but instead got: 99",
     ]);
   });
 });
