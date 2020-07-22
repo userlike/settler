@@ -1,6 +1,6 @@
 {
   "name": "@userlike/settler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "repository": "git@github.com:userlike/settler.git",
   "author": "Anil Anar <mail@anilanar.me>",
