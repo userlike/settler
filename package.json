@@ -11,18 +11,19 @@
     "lerna:version": "lerna version --conventional-commits",
     "lerna:version:pre": "yarn lerna:version --conventional-prerelease",
     "lerna:version:grad": "yarn lerna:version --conventional-graduate",
-    "lerna:publish": "yarn build && lerna publish from-package"
+    "lerna:publish": "lerna publish from-package",
+    "prepare": "yarn build"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@typescript-eslint/eslint-plugin": "3.7.0",
+    "@typescript-eslint/parser": "3.7.0",
     "babel-plugin-macros": "^2.8.0",
     "commitizen": "4.1.2",
     "cz-lerna-changelog": "2.0.3",
-    "@typescript-eslint/eslint-plugin": "3.7.0",
-    "@typescript-eslint/parser": "3.7.0",
     "eslint": "^7.5.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
@@ -34,5 +35,6 @@
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
     }
-  }
+  },
+  "name": "settler"
 }
