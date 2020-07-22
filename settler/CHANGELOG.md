@@ -8,4 +8,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* happy birthday settler ([c39d2a2](https://github.com/anilanar/settler/commit/c39d2a29bb0070b98839759a66a9d4e3dba47f62))
+* happy birthday settler ([c39d2a2](https://github.com/userlike/settler/commit/c39d2a29bb0070b98839759a66a9d4e3dba47f62))
