@@ -1,18 +1,25 @@
 {
   "name": "@userlike/settler",
   "version": "0.0.2",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/es/index.d.ts",
+  "sideEffects": false,
   "repository": "git@github.com:userlike/settler.git",
   "author": "Anil Anar <mail@anilanar.me>",
   "license": "MIT",
+  "files": [
+    "dist/es",
+    "dist/cjs"
+  ],
   "scripts": {
-    "prepublishOnly": "yarn build",
-    "build": "tsc && babel src/index.ts --out-dir dist -x '.ts'",
-    "test": "jest",
-    "lint": "eslint src --ext .ts"
+    "build": "tsc",
+    "build:cjs": "tsc -b tsconfig.cjs.json",
+    "clean": "rm -rf dist",
+    "lint": "eslint src --ext .ts",
+    "test": "jest"
   },
   "devDependencies": {
-    "gbd.macro": "^0.4.0",
     "io-ts-reporters": "^1.2.2"
   },
   "dependencies": {

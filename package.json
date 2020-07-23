@@ -5,9 +5,9 @@
   ],
   "scripts": {
     "commit": "git-cz",
-    "build": "yarn workspaces run build",
-    "test": "yarn workspaces run test",
-    "lint": "yarn workspaces run lint",
+    "build": "lerna run clean && lerna run build && lerna run build:cjs",
+    "test": "lerna run test",
+    "lint": "lerna run lint",
     "lerna:version": "lerna version --conventional-commits",
     "lerna:version:pre": "yarn lerna:version --conventional-prerelease",
     "lerna:version:grad": "yarn lerna:version --conventional-graduate",
