@@ -1,6 +1,6 @@
 {
   "name": "@userlike/settler",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "types": "dist/es/index.d.ts",
