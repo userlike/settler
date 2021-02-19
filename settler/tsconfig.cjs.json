@@ -1,8 +1,10 @@
 {
   "extends": "../config/tsconfig.cjs.json",
-  "files": ["src/index.ts"],
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.test.ts"],
   "compilerOptions": {
     "outDir": "dist/cjs",
-    "rootDir": "src"
+    "rootDir": "src",
+    "types": ["jest"]
   }
 }

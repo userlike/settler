@@ -1,8 +1,10 @@
 {
   "extends": "../config/tsconfig.es.json",
-  "files": ["src/index.ts"],
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.test.ts"],
   "compilerOptions": {
     "outDir": "dist/es",
     "rootDir": "src"
-  }
+  },
+  "types": ["jest"]
 }

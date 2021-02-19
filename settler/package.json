@@ -23,9 +23,9 @@
     "io-ts-reporters": "^1.2.2"
   },
   "dependencies": {
-    "fp-ts": "^2.5.4",
-    "io-ts": "^2.2.2",
-    "ts-toolbelt": "^6.7.2"
+    "fp-ts": "^2.9.5",
+    "io-ts": "^2.2.14",
+    "ts-toolbelt": "^9.3.12"
   },
   "publishConfig": {
     "access": "public"

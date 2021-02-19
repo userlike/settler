@@ -1,9 +1,9 @@
-import * as NEA from "fp-ts/lib/NonEmptyArray";
-import * as E from "fp-ts/lib/Either";
-import { pipe } from "fp-ts/lib/pipeable";
+import * as NEA from "fp-ts/NonEmptyArray";
+import * as E from "fp-ts/Either";
+import { pipe } from "fp-ts/pipeable";
 import * as io from "io-ts";
 import { L } from "ts-toolbelt";
-import { unsafeCoerce } from "fp-ts/lib/function";
+import { unsafeCoerce } from "fp-ts/function";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface Versioned<V extends string = string, T = any> {
