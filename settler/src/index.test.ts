@@ -49,7 +49,7 @@ describe("types", () => {
     expectType<Versions>((to) => to.notEqual<[]>());
   });
 
-  type IsSame<T, I> = T extends I ? B.True : B.False;
+  type IsSame<T, I> = T extends I ? I extends T ? 1 : 0 : 0;
 
   type Assertions<T> = {
     equal: <I>() => IsSame<T, I>;
@@ -57,8 +57,9 @@ describe("types", () => {
   };
 
   function expectType<T>(
-    _: (assertion: Assertions<T>) => B.True
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    _: (assertion: Assertions<T>) => 1
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   ): void {}
 });
 

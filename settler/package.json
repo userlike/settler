@@ -1,6 +1,6 @@
 {
   "name": "@userlike/settler",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "types": "dist/es/index.d.ts",
@@ -20,12 +20,16 @@
     "test": "jest"
   },
   "devDependencies": {
+    "fp-ts": "^2.9.5",
+    "io-ts": "^2.2.14",
     "io-ts-reporters": "^1.2.2"
   },
   "dependencies": {
-    "fp-ts": "^2.5.4",
-    "io-ts": "^2.2.2",
-    "ts-toolbelt": "^6.7.2"
+    "ts-toolbelt": "^9.3.12"
+  },
+  "peerDependencies": {
+    "fp-ts": "^2.9.5",
+    "io-ts": "^2.2.14"
   },
   "publishConfig": {
     "access": "public"
