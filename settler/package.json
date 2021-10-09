@@ -21,10 +21,10 @@
   },
   "devDependencies": {
     "fp-ts": "^2.9.5",
-    "io-ts": "^2.2.14",
-    "io-ts-reporters": "^1.2.2"
+    "io-ts": "^2.2.14"
   },
   "dependencies": {
+    "io-ts-reporters": "^1.2.2",
     "ts-toolbelt": "^9.3.12"
   },
   "peerDependencies": {
