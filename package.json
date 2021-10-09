@@ -8,6 +8,6 @@
   },
   "name": "settler",
   "devDependencies": {
-    "@anilanar/mklib": "^3.0.5"
+    "@anilanar/mklib": "^4.0.0"
   }
 }
