@@ -1,9 +1,5 @@
 ## ⛺ Settler
 
-> DON'T USE IN PRODUCTION, YET.
-
-> This is currently an experimental project.
-
 `settler` is a typesafe migration utility to migrate data between versions, similar to database migrations.
 Utilizes [io-ts](https://github.com/gcanti/io-ts) codecs.
 
